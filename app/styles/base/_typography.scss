@@ -1,0 +1,103 @@
+@font-face {
+  src: url('Colfax-Regular.woff') format('woff');
+  font-family: 'Colfax';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  src: url('Colfax-RegularItalic.woff') format('woff');
+  font-family: 'Colfax';
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  src: url('Colfax-Medium.woff') format('woff');
+  font-family: 'Colfax';
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  src: url('Colfax-MediumItalic.woff') format('woff');
+  font-family: 'Colfax';
+  font-style: italic;
+  font-weight: 500;
+}
+
+@font-face {
+  src: url('Colfax-Bold.woff') format('woff');
+  font-family: 'Colfax';
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  src: url('Colfax-BoldItalic.woff') format('woff');
+  font-family: 'Colfax';
+  font-style: italic;
+  font-weight: 700;
+}
+
+@font-face {
+  src: url('Colfax-Black.woff') format('woff');
+  font-family: 'Colfax';
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  src: url('Colfax-BlackItalic.woff') format('woff');
+  font-family: 'Colfax';
+  font-style: italic;
+  font-weight: 900;
+}
+
+html {
+  color: $light-theme-color;
+  font-family: var(--font-family);
+  font-size: 100%;
+  font-weight: var(--font-weight--regular);
+  line-height: var(--line-height);
+
+  .theme--dark {
+    color: $dark-theme-color;
+  }
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 var(--spacing--small);
+  font-family: var(--font-family--heading);
+  font-size: modular-scale(1);
+  font-weight: var(--font-weight--black);
+  line-height: var(--line-height--heading);
+}
+
+p {
+  margin: 0 0 var(--spacing--small);
+}
+
+a {
+  transition: color var(--duration) var(--timing);
+  color: $light-theme-color;
+  text-decoration-skip: ink;
+
+  .theme--dark & {
+    color: $dark-theme-color;
+  }
+
+  &:hover {
+    color: lighten($light-theme-color, 15%);
+
+    .theme--dark & {
+      color: lighten($dark-theme-color, 15%);
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

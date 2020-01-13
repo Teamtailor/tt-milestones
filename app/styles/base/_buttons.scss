@@ -1,0 +1,38 @@
+button,
+.join-us__link {
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  vertical-align: middle;
+  transition: background-color var(--duration) var(--timing);
+  cursor: pointer;
+  border: 0;
+  border-radius: var(--border-radius);
+  padding: 20px;
+  color: white;
+  font-family: var(--font-family-base);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1;
+  user-select: none;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+
+  .theme--dark & {
+    color: white;
+  }
+
+  &:hover {
+    color: white;
+
+    .theme--dark & {
+      color: white;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    color: white;
+  }
+}

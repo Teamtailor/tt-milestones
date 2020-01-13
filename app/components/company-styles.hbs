@@ -1,0 +1,29 @@
+<style>
+  .header__share,
+  .join-us__link {
+    background-color: {{@metadata.color}};
+    color: {{@metadata.button_text_color}};
+  }
+
+  .header__share:hover,
+  .header__share:focus,
+  .join-us__link:hover,
+  .join-us__link:focus {
+    color: {{@metadata.button_text_color}};
+    filter: brightness(110%);
+  }
+
+  .join-us__link:focus {
+    box-shadow: 0 0 0 2px {{@metadata.color}},
+    inset 0 0 0 2px #ffffff,
+    0 13px 27px -5px rgba(27, 27, 28, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3);
+  }
+
+  .teamtailor__body a:focus:before,
+  .teamtailor__body a:focus:after,
+  .teamtailor__body a:hover:before,
+  .teamtailor__body a:hover:after {
+    background-color: {{@metadata.color}};
+  }
+</style>

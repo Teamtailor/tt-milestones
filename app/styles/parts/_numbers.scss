@@ -1,0 +1,317 @@
+$darker-theme-color: lighten($dark-theme-color, 10%);
+
+.numbers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+
+  .number {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    z-index: 0;
+    margin-bottom: 100px;
+    font-size: 21px;
+    text-align: center;
+
+    @include media(large) {
+      margin-bottom: 200px;
+    }
+
+    &__item {
+      display: block;
+      font-size: 80px;
+      font-weight: var(--font-weight--black);
+      line-height: 1;
+
+      @include media(large) {
+        font-size: 130px;
+      }
+    }
+
+    &--visitors {
+      position: relative;
+      border-right: 10px solid $light-theme-color;
+      border-left: 10px solid $light-theme-color;
+      padding: 0 80px;
+
+      &:before,
+      &:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        content: " ";
+      }
+
+      &:before {
+        left: -30px;
+        border-left: 10px solid $light-theme-color;
+      }
+
+      &:after {
+        right: -30px;
+        border-right: 10px solid $light-theme-color;
+      }
+
+      .theme--dark & {
+        border-right: 10px solid $dark-theme-color;
+        border-left: 10px solid $dark-theme-color;
+
+        &:before {
+          border-left: 10px solid $dark-theme-color;
+        }
+
+        &:after {
+          border-right: 10px solid $dark-theme-color;
+        }
+      }
+
+      .intro {
+        margin-bottom: 20px;
+        font-size: 28px;
+        font-weight: var(--font-weight--light);
+      }
+
+      strong {
+        font-weight: var(--font-weight--black);
+      }
+    }
+
+    &--candidate-type {
+      display: flex;
+      position: relative;
+      top: -100px;
+      align-items: center;
+      transform: scale(0.55);
+      padding-top: 150px;
+      width: 100%;
+      height: 300px;
+
+      @include media(large) {
+        top: 0;
+        transform: scale(1);
+        height: 540px;
+      }
+
+      .number__wrapper {
+        position: relative;
+      }
+
+      .number__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 10px solid $light-theme-color;
+        border-radius: 50%;
+        background-color: $light-theme-background;
+        width: 300px;
+        height: 300px;
+        font-size: 80px;
+
+        &:before,
+        &:after {
+          position: absolute;
+          left: -30px;
+          z-index: -10;
+          border: 10px solid $light-theme-color;
+          border-radius: 50%;
+          width: 340px;
+          height: 340px;
+          content: "";
+
+          .theme--dark & {
+            border: 10px solid $dark-theme-color;
+          }
+        }
+
+        &:after {
+          left: -20px;
+          border: 10px solid $light-theme-background;
+          width: 320px;
+          height: 320px;
+
+          .theme--dark & {
+            border: 10px solid $dark-theme-background;
+          }
+        }
+
+        .theme--dark & {
+          border: 10px solid $dark-theme-color;
+          background-color: $dark-theme-background;
+        }
+
+        &:nth-last-child(-n + 2) {
+          position: absolute;
+          top: 0;
+        }
+
+        &:nth-child(1) {
+          position: relative;
+          top: 85px;
+          left: -130px;
+        }
+
+        &:nth-child(2) {
+          top: -150px;
+          left: -40px;
+        }
+
+        &:nth-child(3) {
+          top: 40px;
+          right: -120px;
+        }
+
+        strong {
+          height: 0;
+          font-size: 21px;
+          font-weight: var(--font-weight--regular);
+        }
+      }
+    }
+
+    &--hires {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 360px;
+      color: white;
+      max-width: 95px;
+      min-width: 95px;
+
+      @include media(large) {
+        max-width: 164px;
+        min-width: 164px;
+      }
+
+      .theme--dark & {
+        color: $dark-theme-background;
+      }
+
+      .heart {
+        fill: $light-theme-color;
+        position: absolute;
+        z-index: -1;
+
+        .theme--dark & {
+          fill: $dark-theme-color;
+        }
+      }
+    }
+
+    &--days-to-hire {
+      display: inline;
+      position: absolute;
+      top: 290px;
+      right: -180px;
+      transform: rotate(-45deg);
+      width: 200px;
+      height: 200px;
+      color: $light-theme-color;
+
+      span {
+        display: inline;
+        position: absolute;
+        top: -115px;
+        left: -59px;
+        transform: rotate(90deg);
+      }
+
+      .theme--dark & {
+        color: $dark-theme-color;
+      }
+
+      @include media(large) {
+        top: 290px;
+        right: -147px;
+      }
+    }
+
+    &--employees {
+      border: 10px solid $light-theme-color;
+      min-width: 365px;
+
+      .theme--dark & {
+        border: 10px solid $dark-theme-color;
+      }
+    }
+
+    &--activities {
+      border: 10px solid $light-theme-color;
+
+      .theme--dark & {
+        border: 10px solid $dark-theme-color;
+      }
+    }
+
+    &--shirts {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 400px;
+      color: white;
+
+      .theme--dark & {
+        color: $dark-theme-background;
+      }
+
+      svg {
+        fill: $light-theme-color;
+        position: absolute;
+        z-index: -1;
+
+        .theme--dark & {
+          fill: $dark-theme-color;
+        }
+      }
+
+      .footnote {
+        vertical-align: super;
+        color: white;
+        text-decoration: none;
+
+        .theme--dark & {
+          color: $dark-theme-background;
+        }
+      }
+    }
+  }
+
+  .collaborate {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    @include media(large) {
+      flex-direction: row;
+    }
+
+    .intro {
+      position: absolute;
+      top: -50px;
+      right: 0;
+      left: 0;
+      font-size: 40px;
+      font-weight: var(--font-weight--black);
+    }
+
+    .number {
+      margin-right: 10px;
+      margin-left: 10px;
+      border: 10px solid $light-theme-color;
+      padding: 50px 40px;
+
+      @include media(large) {
+        padding: 60px 50px;
+      }
+
+      .theme--dark & {
+        border: 10px solid $dark-theme-color;
+      }
+    }
+
+    strong {
+      display: inline;
+    }
+  }
+}
