@@ -1,0 +1,78 @@
+$ember-basic-dropdown-content-background-color: $light-theme-shadow;
+
+.ember-basic-dropdown-trigger {
+  outline: none;
+}
+
+.ember-basic-dropdown-content {
+  position: absolute;
+  top: 75px;
+  box-shadow: 0 6px 28px 0 rgba(0,0,0,0.25);
+  border-radius: 10px;
+  min-width: 200px;
+  overflow: hidden;
+
+  .theme--dark & {
+    box-shadow: 0 6px 28px 0 rgba(0,0,0,0.42);
+    background-color: lighten($dark-theme-background, 10%);
+  }
+}
+
+.share-button {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background-color: none;
+  padding: 15px;
+  width: 100%;
+  height: auto;
+  color: $light-theme-color;
+  font-size: 16px;
+  line-height: 1;
+  text-align: left;
+
+  path {
+    fill: $light-theme-color;
+
+    .theme--dark & {
+      fill: $dark-theme-color;
+    }
+  }
+
+  .theme--dark & {
+    color: $dark-theme-color;
+  }
+}
+
+.linkedin-share-button,
+.fb-share-button {
+  background: none;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    background-color: lighten($light-theme-shadow, 5%);
+    color: $light-theme-color;
+
+    .theme--dark & {
+      background-color: lighten($dark-theme-background, 15%);
+      color: $dark-theme-color;
+    }
+  }
+
+  .linkedin-div,
+  .fb-div {
+    align-items: center;
+  }
+
+  .svg-inline--fa.fa-w-14 {
+    width: 1.2em;
+    height: 1.2em;
+  }
+  
+  span {
+    margin: 3px 0 0 15px;
+    padding: 0;
+    font-weight: var(--font-weight--medium);
+  }
+}

@@ -1,0 +1,35 @@
+$action-color: blue;
+$light-theme-color: #232b32;
+$light-theme-frame: #e0e4e8;
+$light-theme-background: white;
+$light-theme-shadow: #e0e4e8;
+$dark-theme-color: #c3b6a2;
+$dark-theme-frame: white;
+$dark-theme-background: #232b32;
+$dark-theme-shadow: #58595f;
+
+:root {
+  // Typography
+  --font-family: Colfax;
+  --font-family--heading: Colfax;
+
+  --font-weight--regular: 400;
+  --font-weight--medium: 500;
+  --font-weight--semi-bold: 600;
+  --font-weight--bold: 700;
+  --font-weight--extra-bold: 800;
+  --font-weight--black: 900;
+
+  // Line heights
+  --line-height: 1.5;
+  --line-height--heading: 1.1;
+
+  // Other Sizes
+  --border-radius: 0.1875rem;
+  --spacing: 1.5rem;
+  --spacing--small: 0.75rem;
+
+  // Animations
+  --duration: 150ms;
+  --timing: ease;
+}

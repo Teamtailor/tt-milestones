@@ -1,0 +1,62 @@
+html {
+  box-sizing: border-box;
+
+  .theme--dark {
+    background-color: $dark-theme-frame;
+  }
+
+  .theme--light {
+    background-color: $light-theme-frame;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+// Media queries
+
+$small: 480px;
+$medium: 768px;
+$large: 1000px;
+
+@mixin media($canvas) {
+  @if $canvas == small {
+    @media only screen and (min-width: $small) {
+      @content;
+    }
+  } @else if $canvas == medium {
+    @media only screen and (min-width: $medium) {
+      @content;
+    }
+  } @else if $canvas == large {
+    @media only screen and (min-width: $large) {
+      @content;
+    }
+  }
+}
+
+// Container
+
+.page-wrapper {
+  margin: 0 auto;
+  max-width: 1400px;
+}

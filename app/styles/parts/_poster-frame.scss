@@ -1,0 +1,19 @@
+.poster-frame {
+  border-width: 10px;
+  border-style: solid;
+  border-color: $light-theme-frame;
+  background-color: $light-theme-background;
+  padding: 10px;
+  overflow: hidden;
+
+  @include media(large) {
+    border-width: 10px;
+    border-width: 15px;
+    padding: 20px;
+  }
+
+  .theme--dark & {
+    border-color: $dark-theme-frame;
+    background-color: $dark-theme-background;
+  }
+}

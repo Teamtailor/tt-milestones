@@ -1,0 +1,65 @@
+[class^="a__lottie"] {
+  position: absolute;
+}
+
+.a__lottie {
+  &--poppers {
+    bottom: 210px;
+    right: 60px;
+
+    @include media(large) {
+      bottom: 10px;
+      right: 60px;
+    }
+  }
+  &--party-penguin {
+    top: 246px;
+    right: -10px;
+
+    @include media(large) {
+      top: 316px;
+      right: 50px;
+    }
+  }
+
+  &--happy-blob {
+    top: 110px;
+    right: 20px;
+
+    @include media(large) {
+      top: -25px;
+      right: -100px;
+    }
+  }
+
+  &--worm {
+    display: none;
+    bottom: -44px;
+    right: -10px;
+
+    @include media(large) {
+      bottom: -54px;
+      right: 40px;
+    }
+
+    .theme--dark & {
+      display: flex;
+    }
+  }
+}
+
+.a__zoomin {
+  animation-name: zoomIn;
+  animation-duration: 1s;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}

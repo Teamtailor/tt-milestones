@@ -1,0 +1,27 @@
+.u-text-shadow {
+  text-shadow: 8px 10px 0 $light-theme-shadow;
+
+  .theme--dark & {
+    text-shadow: 8px 10px 0 $dark-theme-shadow;
+  }
+
+  &--medium {
+    text-shadow: 5px 7px 0 $light-theme-shadow;
+
+    .theme--dark & {
+      text-shadow: 5px 7px 0 $dark-theme-shadow;
+    }
+  }
+
+  &--small {
+    text-shadow: 3px 4px 0 $light-theme-shadow;
+
+    .theme--dark & {
+      text-shadow: 3px 4px 0 $dark-theme-shadow;
+    }
+  }
+}
+
+.u-nowrap {
+  white-space: nowrap;
+}
