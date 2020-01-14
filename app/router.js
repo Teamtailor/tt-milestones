@@ -7,9 +7,7 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
-  this.route('front', { path: '/' });
-  this.route('report', { path: ':uuid/:year/:secure' });
-  this.route('preview', { path: ':uuid/:year/:secure/preview' });
+  this.route('milestone', { path: ':uuid/:secure' });
   this.route('not-found');
   this.route('fourohfour', { path: '*path' });
 });
